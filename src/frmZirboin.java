@@ -1,9 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * 03/12/2019
+ * Yama
  * and open the template in the editor.
  */
-
+import java.util.Scanner;
 /**
  *
  * @author ayyam8774
@@ -26,82 +26,82 @@ public class frmZirboin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        lbltitle = new javax.swing.JLabel();
+        lblinstruction = new javax.swing.JLabel();
+        lblDtoV = new javax.swing.JLabel();
+        lblCtoV = new javax.swing.JLabel();
+        lblGtoV = new javax.swing.JLabel();
+        lblFtoV = new javax.swing.JLabel();
+        lblBtoV = new javax.swing.JLabel();
+        lblQuestion = new javax.swing.JLabel();
+        txttotal = new javax.swing.JTextField();
+        btncalculate = new javax.swing.JButton();
+        lblD = new javax.swing.JLabel();
+        lblC = new javax.swing.JLabel();
+        lblG = new javax.swing.JLabel();
+        lblF = new javax.swing.JLabel();
+        lblB = new javax.swing.JLabel();
+        lblL = new javax.swing.JLabel();
+        txtD = new javax.swing.JTextField();
+        txtC = new javax.swing.JTextField();
+        txtG = new javax.swing.JTextField();
+        txtF = new javax.swing.JTextField();
+        txtB = new javax.swing.JTextField();
+        txtL = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText(" Zirboin Financial");
+        lbltitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lbltitle.setText(" $ Zirboin Bank $");
 
-        jLabel2.setText("The values for each of the other coins:");
+        lblinstruction.setText("The values for each of the other coins:");
 
-        jLabel3.setText("1 drobzit coin = 100,000 vrobits");
+        lblDtoV.setText("1 drobzit coin = 100,000 vrobits");
 
-        jLabel4.setText("1 clickwick coin = 50,000 vrobits");
+        lblCtoV.setText("1 clickwick coin = 50,000 vrobits");
 
-        jLabel5.setText("1 gazoontight coin = 10,000 vrobits");
+        lblGtoV.setText("1 gazoontight coin = 10,000 vrobits");
 
-        jLabel6.setText("1 frazoint coin = 1,000 vrobits");
+        lblFtoV.setText("1 frazoint coin = 1,000 vrobits");
 
-        jLabel7.setText("1 blointoint coin = 500 vrobits");
+        lblBtoV.setText("1 blointoint coin = 500 vrobits");
 
-        jLabel8.setText("How much vrobits do you have?");
+        lblQuestion.setText("How much vrobits do you have?");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txttotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txttotalActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Calculate");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btncalculate.setText("Calculate");
+        btncalculate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btncalculateActionPerformed(evt);
             }
         });
 
-        jLabel9.setText("Dropzit coins →");
+        lblD.setText("Dropzit coins →");
 
-        jLabel10.setText("Clickwick coins →");
+        lblC.setText("Clickwick coins →");
 
-        jLabel11.setText("Gazoontight coins →");
+        lblG.setText("Gazoontight coins →");
 
-        jLabel12.setText("Frazonint coins →");
+        lblF.setText("Frazonint coins →");
 
-        jLabel13.setText("Blointoint coins →");
+        lblB.setText("Blointoint coins →");
 
-        jLabel14.setText("Leftover coins → ");
+        lblL.setText("Leftover coins → ");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtDActionPerformed(evt);
             }
         });
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        txtG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                txtGActionPerformed(evt);
             }
         });
 
@@ -111,111 +111,155 @@ public class frmZirboin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(250, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbltitle, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(250, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
+                    .addComponent(lblinstruction)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel3)
-                        .addComponent(jLabel5)
-                        .addComponent(jLabel4)
-                        .addComponent(jLabel6)
-                        .addComponent(jLabel7)))
+                        .addComponent(lblDtoV)
+                        .addComponent(lblGtoV)
+                        .addComponent(lblCtoV)
+                        .addComponent(lblFtoV)
+                        .addComponent(lblBtoV)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txttotal, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1)
+                        .addComponent(btncalculate)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGap(111, 111, 111)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(lblG)
+                            .addComponent(lblD, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblC, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblF, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblB, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblL, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                            .addComponent(jTextField4)
-                            .addComponent(jTextField5)
-                            .addComponent(jTextField6)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField7))
+                            .addComponent(txtC, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                            .addComponent(txtG)
+                            .addComponent(txtF)
+                            .addComponent(txtB)
+                            .addComponent(txtD)
+                            .addComponent(txtL))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel8)
+                .addComponent(lblQuestion)
                 .addGap(206, 206, 206))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbltitle, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
-                .addComponent(jLabel8)
+                .addComponent(lblQuestion)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(lblinstruction)
+                    .addComponent(txttotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btncalculate))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(lblDtoV)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel9)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblCtoV)
+                    .addComponent(lblD)
+                    .addComponent(txtD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel10)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblGtoV)
+                    .addComponent(lblC)
+                    .addComponent(txtC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel11)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblFtoV)
+                    .addComponent(lblG)
+                    .addComponent(txtG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel12)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblBtoV)
+                    .addComponent(lblF)
+                    .addComponent(txtF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblB)
+                    .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblL)
+                    .addComponent(txtL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txttotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttotalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txttotalActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btncalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalculateActionPerformed
+        Scanner keyedInput = new Scanner (System.in);
+        
+        double dropzit , clickwick , gazoontight , frazoint , blointoint , leftover;
+        double dropzit2 , clickwick2 , gazoontight2 , frazoint2 , blointoint2 , leftover2;
+        
+        double total = Double.parseDouble(txttotal.getText());
+        
+        // For dropzit ↓↓↓
+        dropzit = (total / 100000);
+        
+        dropzit2 = Math.floor(dropzit);
+        
+        txtD.setText(String.valueOf(dropzit2));
+        
+        // For clickwick ↓↓↓
+        clickwick = (dropzit / 50000);
+        
+        clickwick2 = Math.floor(clickwick);
+        
+        txtC.setText(String.valueOf(clickwick2));
+        
+        // For gazoontight ↓↓↓
+        gazoontight = (clickwick / 10000);
+        
+        gazoontight2 = Math.floor(gazoontight);
+        
+        txtG.setText(String.valueOf(gazoontight2));
+        
+        // For frazoint ↓↓↓
+        frazoint = (gazoontight / 1000);
+        
+        frazoint2 = Math.floor(frazoint);
+        
+        txtF.setText(String.valueOf(frazoint2));
+        
+        // For blointoint ↓↓↓
+        blointoint = (frazoint / 500);
+        
+        blointoint2 = Math.floor(blointoint);
+        
+        txtB.setText(String.valueOf(blointoint2));
+        
+        
+        
+        
+    }//GEN-LAST:event_btncalculateActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtDActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void txtGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_txtGActionPerformed
 
     /**
      * @param args the command line arguments
@@ -253,27 +297,27 @@ public class frmZirboin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JButton btncalculate;
+    private javax.swing.JLabel lblB;
+    private javax.swing.JLabel lblBtoV;
+    private javax.swing.JLabel lblC;
+    private javax.swing.JLabel lblCtoV;
+    private javax.swing.JLabel lblD;
+    private javax.swing.JLabel lblDtoV;
+    private javax.swing.JLabel lblF;
+    private javax.swing.JLabel lblFtoV;
+    private javax.swing.JLabel lblG;
+    private javax.swing.JLabel lblGtoV;
+    private javax.swing.JLabel lblL;
+    private javax.swing.JLabel lblQuestion;
+    private javax.swing.JLabel lblinstruction;
+    private javax.swing.JLabel lbltitle;
+    private javax.swing.JTextField txtB;
+    private javax.swing.JTextField txtC;
+    private javax.swing.JTextField txtD;
+    private javax.swing.JTextField txtF;
+    private javax.swing.JTextField txtG;
+    private javax.swing.JTextField txtL;
+    private javax.swing.JTextField txttotal;
     // End of variables declaration//GEN-END:variables
 }
