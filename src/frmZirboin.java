@@ -159,23 +159,26 @@ public class frmZirboin extends javax.swing.JFrame {
                             .addComponent(lblB, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtC, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                                .addComponent(txtG)
-                                .addComponent(txtF)
-                                .addComponent(txtD)
-                                .addComponent(txtL))
-                            .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtC, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                                        .addComponent(txtG)
+                                        .addComponent(txtF)
+                                        .addComponent(txtD))
+                                    .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtL)
+                                .addGap(37, 37, 37))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(txtcomment, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblQuestion)
                 .addGap(206, 206, 206))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtcomment, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,54 +240,109 @@ public class frmZirboin extends javax.swing.JFrame {
         double dropzit , clickwick , gazoontight , frazoint , blointoint , leftover;
         double dropzit2 , clickwick2 , gazoontight2 , frazoint2 , blointoint2 , leftover2;
         
-        double total [] = new double [4];
+        double total [] = new double [5];
         total[0] = Double.parseDouble(txttotal.getText());
         
+        
         // For dropzit ↓↓↓
-        dropzit = (total[0] / 100000);
+        if (total[0] >= 100000)
+        {
+            dropzit = (total[0] / 100000);
         
-        dropzit2 = Math.floor(dropzit);
+            dropzit2 = Math.floor(dropzit);
         
-        txtD.setText(""+ dropzit2 +"");
-        total[1] = Math.abs( (dropzit - dropzit2) * total[0]);
+            txtD.setText(""+ dropzit2 +"");
+            total[1] = Math.abs( (dropzit - dropzit2) * total[0]);
+            
+            txtcomment.setText("Thank you");
+        }
+        
+        if (total[0] < 100000)
+        {
+            txtD.setText(""+ 0 +"");
+            total[1] = total[0];
+            
+            txtcomment.setText("Thank you");
+        }
+        
         
         // For clickwick ↓↓↓
-        clickwick = (total[1] / 50000);
+        if (total[1] >= 50000)    
+        {
+            clickwick = (total[1] / 50000);
+
+            clickwick2 = Math.floor(clickwick);
+
+            txtC.setText(""+ clickwick2 +"");
+            total[2] = Math.abs((clickwick - clickwick2) * total[1]);
+        }
         
-        clickwick2 = Math.floor(clickwick);
+        if (total[1] < 50000)
+        {
+            txtC.setText(""+ 0 +"");
+            total[2] = total[1];
+        }
         
-        txtC.setText(""+ clickwick2 +"");
-        total[2] = Math.abs((clickwick - clickwick2) * total[1]);
         
         // For gazoontight ↓↓↓
-        gazoontight = (total[2] / 10000);
+        if (total[2] >= 10000)
+        {
+            gazoontight = (total[2] / 10000);
         
-        gazoontight2 = Math.floor(gazoontight);
+            gazoontight2 = Math.floor(gazoontight);
+
+            txtG.setText(""+ gazoontight2 +"");
+            total[3] = Math.abs((gazoontight - gazoontight2) * total[2]);
+        }
         
-        txtG.setText(""+ gazoontight2 +"");
-        total[3] = Math.abs((gazoontight - gazoontight2) * total[2]);
+        if (total[2] < 10000)
+        {
+            txtG.setText(""+ 0 +"");
+            total[3] = total[2];
+        }
+        
         
         // For frazoint ↓↓↓
-        frazoint = (total[3] / 1000);
+        if (total[3] >= 1000)
+        {
+            frazoint = (total[3] / 1000);
         
-        frazoint2 = Math.floor(frazoint);
+            frazoint2 = Math.floor(frazoint);
+
+            txtF.setText(""+ frazoint2 +"");
+            total[4] = Math.abs((frazoint - frazoint2) * total[3]);
+        }
         
-        txtF.setText(""+ frazoint +"");
-        total[4] = Math.abs((frazoint - frazoint2) * total[3]);
+        if (total[3] < 1000)
+        {
+            txtF.setText(""+ 0 +"");
+            total[4] = total[3];
+        }
+        
         
         // For blointoint ↓↓↓
-        blointoint = (total[4] / 500);
+        if (total[4] >= 500)
+        {
+            blointoint = (total[4] / 500);
         
-        blointoint2 = Math.floor(blointoint);
+            blointoint2 = Math.floor(blointoint);
+
+            txtB.setText(""+ blointoint2 +"");
+            total[5] = Math.abs((blointoint - blointoint2) * total[4]);
+        }
         
-        txtB.setText(""+ blointoint2 +"");
+        if (total[4] < 500)
+        {
+            txtB.setText(""+ 0 +"");
+            total[5] = total[4];
+        }
         
         // For Leftover ↓↓↓
-        leftover = Math.floor(total[4]);
+        leftover = total[5];
         
         txtL.setText(""+ leftover +"");
         
-        txtcomment.setText("Thank you");
+        
         
     }//GEN-LAST:event_btncalculateActionPerformed
 
