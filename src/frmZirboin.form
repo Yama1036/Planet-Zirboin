@@ -46,7 +46,6 @@
                       <Component id="txttotal" min="-2" pref="180" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="btncalculate" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
@@ -54,27 +53,35 @@
                           <Component id="lblG" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblD" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="lblC" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblL" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="lblF" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="lblB" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblL" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtC" pref="59" max="32767" attributes="0"/>
-                          <Component id="txtG" max="32767" attributes="0"/>
-                          <Component id="txtF" max="32767" attributes="0"/>
-                          <Component id="txtB" max="32767" attributes="0"/>
-                          <Component id="txtD" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtL" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtC" pref="59" max="32767" attributes="0"/>
+                              <Component id="txtG" max="32767" attributes="0"/>
+                              <Component id="txtF" max="32767" attributes="0"/>
+                              <Component id="txtD" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtL" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="txtB" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="lblQuestion" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="txtcomment" min="-2" pref="90" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -127,7 +134,9 @@
                   <Component id="lblL" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtL" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="txtcomment" min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -220,22 +229,51 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtD">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtC">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtG">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtGActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtF">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtB">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtL">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtcomment">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="1"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtcommentActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

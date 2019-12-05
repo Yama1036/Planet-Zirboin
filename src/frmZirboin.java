@@ -48,6 +48,7 @@ public class frmZirboin extends javax.swing.JFrame {
         txtF = new javax.swing.JTextField();
         txtB = new javax.swing.JTextField();
         txtL = new javax.swing.JTextField();
+        txtcomment = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,15 +94,33 @@ public class frmZirboin extends javax.swing.JFrame {
 
         lblL.setText("Leftover coins → ");
 
+        txtD.setEditable(false);
         txtD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDActionPerformed(evt);
             }
         });
 
+        txtC.setEditable(false);
+
+        txtG.setEditable(false);
         txtG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGActionPerformed(evt);
+            }
+        });
+
+        txtF.setEditable(false);
+
+        txtB.setEditable(false);
+
+        txtL.setEditable(false);
+
+        txtcomment.setEditable(false);
+        txtcomment.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtcomment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcommentActionPerformed(evt);
             }
         });
 
@@ -128,30 +147,35 @@ public class frmZirboin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txttotal, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btncalculate)
-                        .addContainerGap())
+                        .addComponent(btncalculate))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(111, 111, 111)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblG)
                             .addComponent(lblD, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblC, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblL, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblF, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblB, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblL, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(lblB, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtC, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                            .addComponent(txtG)
-                            .addComponent(txtF)
-                            .addComponent(txtB)
-                            .addComponent(txtD)
-                            .addComponent(txtL))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtC, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                                .addComponent(txtG)
+                                .addComponent(txtF)
+                                .addComponent(txtD)
+                                .addComponent(txtL))
+                            .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblQuestion)
                 .addGap(206, 206, 206))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtcomment, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,7 +219,9 @@ public class frmZirboin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblL)
                     .addComponent(txtL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtcomment, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -211,7 +237,7 @@ public class frmZirboin extends javax.swing.JFrame {
         double dropzit , clickwick , gazoontight , frazoint , blointoint , leftover;
         double dropzit2 , clickwick2 , gazoontight2 , frazoint2 , blointoint2 , leftover2;
         
-        double total [] = new double [6];
+        double total [] = new double [4];
         total[0] = Double.parseDouble(txttotal.getText());
         
         // For dropzit ↓↓↓
@@ -258,7 +284,7 @@ public class frmZirboin extends javax.swing.JFrame {
         
         txtL.setText(""+ leftover +"");
         
-        
+        txtcomment.setText("Thank you");
         
     }//GEN-LAST:event_btncalculateActionPerformed
 
@@ -269,6 +295,10 @@ public class frmZirboin extends javax.swing.JFrame {
     private void txtGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtGActionPerformed
+
+    private void txtcommentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcommentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcommentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -327,6 +357,7 @@ public class frmZirboin extends javax.swing.JFrame {
     private javax.swing.JTextField txtF;
     private javax.swing.JTextField txtG;
     private javax.swing.JTextField txtL;
+    private javax.swing.JTextField txtcomment;
     private javax.swing.JTextField txttotal;
     // End of variables declaration//GEN-END:variables
 }
