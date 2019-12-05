@@ -218,36 +218,38 @@ public class frmZirboin extends javax.swing.JFrame {
         
         dropzit2 = Math.floor(dropzit);
         
-        txtD.setText(String.valueOf(dropzit2));
+        txtD.setText(""+dropzit2+"");
         
         // For clickwick ↓↓↓
         clickwick = (dropzit / 50000);
         
         clickwick2 = Math.floor(clickwick);
         
-        txtC.setText(String.valueOf(clickwick2));
+        txtC.setText(""+clickwick2+"");
         
         // For gazoontight ↓↓↓
         gazoontight = (clickwick / 10000);
         
         gazoontight2 = Math.floor(gazoontight);
         
-        txtG.setText(String.valueOf(gazoontight2));
+        txtG.setText(""+gazoontight2+"");
         
         // For frazoint ↓↓↓
         frazoint = (gazoontight / 1000);
         
         frazoint2 = Math.floor(frazoint);
         
-        txtF.setText(String.valueOf(frazoint2));
+        txtF.setText(""+frazoint+"");
         
         // For blointoint ↓↓↓
         blointoint = (frazoint / 500);
         
         blointoint2 = Math.floor(blointoint);
         
-        txtB.setText(String.valueOf(blointoint2));
+        txtB.setText(""+blointoint2+"");
         
+        // For Leftover ↓↓↓
+        leftover = blointoint;
         
         
         
