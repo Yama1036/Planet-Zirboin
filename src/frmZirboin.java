@@ -211,45 +211,52 @@ public class frmZirboin extends javax.swing.JFrame {
         double dropzit , clickwick , gazoontight , frazoint , blointoint , leftover;
         double dropzit2 , clickwick2 , gazoontight2 , frazoint2 , blointoint2 , leftover2;
         
-        double total = Double.parseDouble(txttotal.getText());
+        double total [] = new double [6];
+        total[0] = Double.parseDouble(txttotal.getText());
         
         // For dropzit ↓↓↓
-        dropzit = (total / 100000);
+        dropzit = (total[0] / 100000);
         
         dropzit2 = Math.floor(dropzit);
         
-        txtD.setText(""+dropzit2+"");
+        txtD.setText(""+ dropzit2 +"");
+        total[1] = Math.abs( (dropzit - dropzit2) * total[0]);
         
         // For clickwick ↓↓↓
-        clickwick = (dropzit / 50000);
+        clickwick = (total[1] / 50000);
         
         clickwick2 = Math.floor(clickwick);
         
-        txtC.setText(""+clickwick2+"");
+        txtC.setText(""+ clickwick2 +"");
+        total[2] = Math.abs((clickwick - clickwick2) * total[1]);
         
         // For gazoontight ↓↓↓
-        gazoontight = (clickwick / 10000);
+        gazoontight = (total[2] / 10000);
         
         gazoontight2 = Math.floor(gazoontight);
         
-        txtG.setText(""+gazoontight2+"");
+        txtG.setText(""+ gazoontight2 +"");
+        total[3] = Math.abs((gazoontight - gazoontight2) * total[2]);
         
         // For frazoint ↓↓↓
-        frazoint = (gazoontight / 1000);
+        frazoint = (total[3] / 1000);
         
         frazoint2 = Math.floor(frazoint);
         
-        txtF.setText(""+frazoint+"");
+        txtF.setText(""+ frazoint +"");
+        total[4] = Math.abs((frazoint - frazoint2) * total[3]);
         
         // For blointoint ↓↓↓
-        blointoint = (frazoint / 500);
+        blointoint = (total[4] / 500);
         
         blointoint2 = Math.floor(blointoint);
         
-        txtB.setText(""+blointoint2+"");
+        txtB.setText(""+ blointoint2 +"");
         
         // For Leftover ↓↓↓
-        leftover = blointoint;
+        leftover = Math.floor(total[4]);
+        
+        txtL.setText(""+ leftover +"");
         
         
         
